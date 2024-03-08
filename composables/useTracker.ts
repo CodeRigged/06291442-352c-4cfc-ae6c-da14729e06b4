@@ -37,7 +37,6 @@ export const useTracker = () => {
         trackingData.value.totalSubscriptions++;
         trackingData.value.pages[user.value.assignedVariation].subscriptions++;
         user.value.hasSignedUp = true;
-        console.log('User has signed up.');
         trackEvent({
           eventName: 'SignUp',
           timestamp: Date.now(),

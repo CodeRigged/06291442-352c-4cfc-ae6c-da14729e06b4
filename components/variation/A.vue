@@ -17,17 +17,17 @@
               </template>
 
               <template #default="{ isActive }">
-                <v-card title="Subscribe">
-                  <v-card-text> To further read more articles please subscribe! </v-card-text>
+                <v-card title="Sign Up">
+                  <v-card-text> To further read more articles please sign up! </v-card-text>
 
                   <v-card-actions>
                     <v-spacer></v-spacer>
                     <v-btn variant="plain" text="Cancel" @click="isActive.value = false" />
                     <v-btn
                       color="primary"
-                      text="Subscribe"
+                      text="Sign Up"
                       @click="
-                        tracker.subscribe();
+                        tracker.signUp();
                         isActive.value = false;
                       "
                     />

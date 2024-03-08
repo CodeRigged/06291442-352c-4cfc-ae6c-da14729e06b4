@@ -9,7 +9,7 @@
             {{ article.description }}
           </v-card-text>
           <v-card-actions>
-            <v-btn text @click="tracker.subscribe">Subscribe</v-btn>
+            <v-btn text @click="tracker.signUp">Sign up</v-btn>
           </v-card-actions>
         </v-card>
       </v-col>

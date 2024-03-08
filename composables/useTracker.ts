@@ -29,17 +29,17 @@ export const useTracker = () => {
    * This function handles the subscription process for the user.
    * If the user has already signed up, it logs a message. Otherwise, it updates some parameters and calls the trackEvent.
    */
-  const subscribe = () => {
+  const signUp = () => {
     try {
       if (user.value.hasSignedUp) {
-        console.log('User has already subscribed');
+        console.log('User has already signed up.');
       } else {
         trackingData.value.totalSubscriptions++;
         trackingData.value.pages[user.value.assignedVariation].subscriptions++;
         user.value.hasSignedUp = true;
-        console.log('User has subscribed');
+        console.log('User has signed up.');
         trackEvent({
-          eventName: 'Subscribe',
+          eventName: 'SignUp',
           timestamp: Date.now(),
           userId: user.value.id,
           url: window.location.href,
@@ -53,5 +53,5 @@ export const useTracker = () => {
     }
   };
 
-  return { user, trackingData, subscribe };
+  return { user, trackingData, signUp };
 };

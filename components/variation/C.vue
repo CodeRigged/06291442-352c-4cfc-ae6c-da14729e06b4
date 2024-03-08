@@ -9,7 +9,7 @@
           </v-card-text>
 
           <v-card-actions>
-            <v-btn color="white" variant="text" block @click="tracker.subscribe">Subscribe</v-btn>
+            <v-btn color="white" variant="text" block @click="tracker.signUp">Sign up</v-btn>
           </v-card-actions>
         </v-card>
       </v-col>

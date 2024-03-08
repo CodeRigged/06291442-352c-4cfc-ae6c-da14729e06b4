@@ -20,6 +20,9 @@ const fetchRandomVariation = (variations: string = 'ABC') => {
 export const defaultUserData = (): User => {
   /**
    * Generates a unique ID using the crypto.randomUUID() function.
+   *
+   * !! IMPORTANT !! This doesn't work in unsecure environments.
+   * Visit https://developer.mozilla.org/en-US/docs/Web/API/Crypto/randomUUID for more information.
    */
   const myuuid = crypto.randomUUID();
   /**
